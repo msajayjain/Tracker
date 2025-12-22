@@ -1,0 +1,71 @@
+Add-Migration Inital -- this is create very first table
+
+Add-Migration AddNewColum -- this is update existing table structure such as adding new column 
+Add- Migration DropColumn  this to drop existing column from table
+
+update-databse -verbose  this is updated table in database
+
+
+
+Node JS is the run javescript Engine  on server side ( server side run time)
+Node Js is run time java script env which use V8 java scrip engine 
+
+Express is the framwork to build web applicatuin suppport Node JS.
+
+
+Git 
+
+git init
+git add .
+ git commit -m "inital committ"
+git push origin main
+
+
+add this if commit does not work 
+git config --global user.name "Ajay jA"  
+git config --global user.email "msajayjain@gmail.com"
+
+In case 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/msajayjain/IssueTracker.git/'
+
+Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token  by adding persomission content" read/write" then run below comments ,m replace MS ajayjain and token
+
+
+
+
+Add workflow persomission to github
+
+
+
+
+The Strategy: GitHub Flow
+The core rule is: The master branch is always deployable. No one works on it directly. Every change happens in a "Feature Branch."
+1. Create a Feature Branch (Locally)
+Whenever a user wants to add a feature or fix a bug, they create a new branch.
+git checkout master (Go to the main road)
+
+# Pull the latest changes first
+git pull origin master
+
+# Create and switch to a new branch
+git checkout -b feature/add-login-page
+
+teesting
+
+new repo
+git add .
+git commit -m "Initial commit"
+git branch -M main
+Go to GitHub → New Repository
+
+Name: your-project
+
+❌ Do NOT add README or .gitignore (already local)
+Copy the HTTPS URL.
+
+git branch -M main
+git remote add origin https://github.com/<org-or-user>/your-project.git
+git push -u origin main
+
+testing

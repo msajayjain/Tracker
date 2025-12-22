@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productservices
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: productservices
+  template:
+    metadata:
+      labels:
+        app: productservices
+    spec:
+      containers:
+      - name: productservices
+        image: productservices:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80

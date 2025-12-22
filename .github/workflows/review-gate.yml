@@ -1,0 +1,15 @@
+name: Approval Check
+on:
+  pull_request_review:
+    types: [submitted, edited, dismissed]
+  pull_request:
+    types: [opened, synchronized, reopened]
+
+jobs:
+  check-approvals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for at least 1 approval
+        uses: kim-sue/require-approvals-action@v1
+        with:
+          number: 1 # Number of required approvals

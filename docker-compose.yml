@@ -1,0 +1,39 @@
+version: '3.4'
+
+networks:
+  demo-network:     
+services:
+  
+  userservice:
+    container_name: Demo-user-service
+    image: ${DOCKER_REGISTRY-}userservice
+    build:
+        context: .
+        dockerfile: UserService/Dockerfile
+    ports:
+        - 8001:80
+    networks:
+        - demo-network
+  
+  productservices:
+    container_name: demo-product-service
+    image: ${DOCKER_REGISTRY-}productservices
+    build:
+      context: .
+      dockerfile: ProductServices/Dockerfile
+    ports:
+       - 8002:80
+    networks:
+       - demo-network 
+
+
+  apigateway:
+    container_name: Demo-api-gateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: APIGateWay/Dockerfile
+    ports:
+      - 8004:80
+    networks:
+      - demo-network 
