@@ -2,7 +2,7 @@
 using UserService.Database;
 using UserService.Database.Entities;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+// added For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace UserService.Controllers
 {
